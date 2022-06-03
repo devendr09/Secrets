@@ -27,7 +27,7 @@ app.use(passport.session());
 let port = process.env.PORT;
 if(port==null || port=="")  port = 3000;
 
-mongoose.connect("mongodb+srv://admin-devendra:test123@cluster0.mtoamd5.mongodb.net/UserDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.LINK, { useNewUrlParser: true, useUnifiedTopology: true });
 // mongoose.connect("mongodb://localhost:27017/UserDB", { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.set('useCreateIndex', true);
 
